@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HomeItems from '../HomeItems/HomeItems';
 
 const Home = () => {
     const [homeItems, setHomeItems] = useState([])
@@ -11,7 +12,9 @@ const Home = () => {
         <div>
             <h1>INVENTORY ITEMS</h1>
             <div className='inventory-items-container'>
-
+                {
+                    homeItems.map(item => <HomeItems item={item} />)
+                }
             </div>
         </div>
     );
