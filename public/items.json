@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Lava Plant Milk",
+        "img": "https://i.ibb.co/cTjWgc2/lava-milk.jpg",
+        "price": "$56",
+        "description": "Like their other products, Lavva Plant Milk is made with pili nuts, but without added sugars. In fact, the Unsweetened variety contains just three simple ingredients: coconut water, filtered water, and pili nuts. It also comes in Chocolate, which is sweetened solely with dates and enhanced with mesquite and maca",
+        "quantity": 850,
+        "supplier": ""
+    },
+    {
+        "name": "Alpro Blueberry",
+        "img": "https://i.ibb.co/sRdhxYt/blueberry.jpg",
+        "price": "$150",
+        "description": "Description. Fermented soya product, blueberry cherry, with added calcium and vitamins. Source of protein. Protein, as part of balanced diet and lifestyle, contributes to the maintenance of muscle mass.",
+        "quantity": 1500,
+        "supplier": ""
+    },
+    {
+        "name": "100% Cvekla",
+        "img": "https://i.ibb.co/4ZYQHKv/100.jpg",
+        "price": "$230",
+        "description": "beetroot - pasteurized vegetables ingredients: gvekla 59%, water, sugar, cooking salt, acid, keep at room temperature, after opening chihuahuas and frying pans and using within 14 days, best used to datun labeled on packaging, lot number: marked on packaging, p e nutrients for 100g bottom for portion %ru 50g per portion 50g 1% rgi fat from which saturated fatty acids carbohydrates from which fiber protein sugars 111kj",
+        "quantity": 1200,
+        "supplier": ""
+    },
+    {
+        "name": "Alpro Almond",
+        "img": "https://i.ibb.co/7YMsY1w/almond.jpg",
+        "price": "$180",
+        "description": "Almond drink with added calcium and vitamins. A varied, balanced diet and a healthy lifestyle is recommended for good health. Why not glass? Well, glass guzzles lots of energy to produce, transport, reuse and recycle",
+        "quantity": 950,
+        "supplier": ""
+    },
+    {
+        "name": "Almond Cornfleax",
+        "img": "https://i.ibb.co/mJyF7h0/almont-conflex.jpg",
+        "price": "$125",
+        "description": "Nourishing & Tasty Breakfast - Start your day with a nourishing and tasty breakfast cereal such as 'Kellogg's Corn Flakes with Real Honey.'Kellogg's Corn Flakes with Almond' is not only yummy but is also High in Iron, Vitamin B1, B2, B3, B6, Vitamin C and Source of Vitamin B12 and Folate.",
+        "quantity": 1600,
+        "supplier": ""
+    },
+    {
+        "name": "Real Cornflakex",
+        "img": "https://i.ibb.co/Qnhp5KC/real-conflex.jpg",
+        "price": "$80",
+        "description": "Nourishing & Tasty Breakfast - Start your day with a nourishing and tasty breakfast cereal such as 'Kellogg's Corn Flakes with Real Honey.'Kellogg's Corn Flakes with Real Honey' is not only yummy but is also High in Iron, Vitamin B1, B2, B3, B6, Vitamin C and Source of Vitamin B12 and Folate.",
+        "quantity": 630,
+        "supplier": ""
+    }
+]

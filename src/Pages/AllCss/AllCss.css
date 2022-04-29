@@ -1,0 +1,31 @@
+.nav-header {
+    background: #070920;
+    height: 80px;
+}
+
+.nav-title {
+    color: #e9a6b2f5;
+    outline-width: 36px;
+    font-size: 37px;
+    font-weight: 700;
+    font-family: serif;
+}
+
+.nav-title span {
+    color: #ff0052;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    padding: 0px 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-button {
+    margin-left: 115px;
+    color: #ff0052;
+    font-weight: bold;
+    border: 1px solid #3c3a3a;
+    padding: 10px 40px;
+}
