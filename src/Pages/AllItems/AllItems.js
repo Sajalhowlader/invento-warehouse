@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ShowItems from '../ShowItems/ShowItems';
 
 const AllItems = () => {
     const [allItems, setAllItems] = useState([])
@@ -12,7 +13,7 @@ const AllItems = () => {
             <h1>ALL ITEMS</h1>
             <div className="all-items-container">
                 {
-                    allItems.map(item => <AllItems item={item} />)
+                    allItems.map(items => <ShowItems items={items} />)
                 }
             </div>
         </div>
