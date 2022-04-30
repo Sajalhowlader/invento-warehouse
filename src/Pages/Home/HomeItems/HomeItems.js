@@ -11,6 +11,7 @@ const HomeItems = ({ item }) => {
                 <h4>{price}</h4>
                 <h4>{quantity}</h4>
                 <p>{description.slice(0, 100) + "..."}</p>
+                <button className='update-btn'>Update</button>
             </div>
         </div>
     );

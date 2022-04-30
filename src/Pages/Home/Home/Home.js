@@ -8,12 +8,13 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setHomeItems(data))
     }, [])
+    const Items = homeItems.slice(0, 6)
     return (
         <div>
             <h1>INVENTORY ITEMS</h1>
             <div className='inventory-items-container'>
                 {
-                    homeItems.map(item => <HomeItems item={item} />)
+                    Items.map(item => <HomeItems item={item} />)
                 }
             </div>
         </div>
