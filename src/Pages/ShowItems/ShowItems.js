@@ -6,8 +6,8 @@ const ShowItems = ({ items }) => {
     return (
 
         <div className='items-container_2'>
-            <img src={img} alt="" />
-            <div>
+            <div className="items-info">
+                <img src={img} alt="" />
                 <h2>{name}</h2>
                 <h4>{price}</h4>
                 <h4>{quantity}</h4>

@@ -18,7 +18,7 @@ const Header = () => {
                         <NavLink to="/home" aria-current="page" >HOME</NavLink>
                     </ul>
 
-                    <button className="btn btn-outline-success nav-button" type="submit">Search</button>
+                    <button className="btn btn-outline-success nav-button" type="submit">LOGIN</button>
 
                 </div>
             </div>

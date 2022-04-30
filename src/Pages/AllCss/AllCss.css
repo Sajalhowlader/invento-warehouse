@@ -89,3 +89,32 @@
     padding: 5px;
     margin-right: 15px;
 }
+
+/* All items component css style */
+.items-info img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px 12px;
+}
+
+.items-info {
+    text-align: center;
+    background: #fff7f7;
+}
+
+.items-container_2 {
+    border: 1px solid #c1c1c1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 530px;
+}
+
+.all-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 95%;
+    margin: 0 auto;
+}
