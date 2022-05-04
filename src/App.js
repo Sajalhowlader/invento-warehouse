@@ -11,6 +11,7 @@ import SingUp from './Pages/User/SingUp/SingUp';
 
 
 function App() {
+  
   return (
     <div className="App">
       <Header />
