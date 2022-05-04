@@ -16,6 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='home' element={<Home />} />
         <Route path='allItems' element={<AllItems />} />
         <Route path='singIn' element={<SingIn />} />
         <Route path='singUp' element={<SingUp />} />
