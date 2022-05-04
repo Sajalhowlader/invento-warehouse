@@ -5,6 +5,8 @@ import Home from './Pages/Home/Home/Home';
 import Footer from './Pages/Home/Footer/Footer';
 import Header from './Pages/Home/Header/Header';
 import AllItems from './Pages/AllItems/AllItems';
+import SingIn from './Pages/User/SingIn/SingIn';
+import SingUp from './Pages/User/SingUp/SingUp';
 
 
 
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='allItems' element={<AllItems />} />
+        <Route path='singIn' element={<SingIn />} />
+        <Route path='singUp' element={<SingUp />} />
       </Routes>
       <Footer />
     </div>

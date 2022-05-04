@@ -118,3 +118,37 @@
     width: 95%;
     margin: 0 auto;
 }
+
+/* Sing in and sing up form style */
+.divider-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.divider-img img {
+    width: 110%;
+}
+
+.divider-info {
+    /* border: 1px solid; */
+    width: 66%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.divider-info input {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid #38d39f;
+    background: none;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.divider-info img {
+    width: 25%;
+    margin-bottom: 32px;
+}

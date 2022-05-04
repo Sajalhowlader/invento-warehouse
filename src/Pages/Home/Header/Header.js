@@ -1,9 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
-
+    const navigate = useNavigate()
+    const handleSingIn = () => {
+        navigate("/singIn")
+    }
     return (
         <nav className="navbar navbar-expand-lg nav-header">
             <div className="container">
@@ -18,7 +21,7 @@ const Header = () => {
                         <NavLink to="/home" aria-current="page" >HOME</NavLink>
                     </ul>
 
-                    <button className="btn btn-outline-success nav-button" type="submit">SING UP</button>
+                    <button className="btn btn-outline-success nav-button" type="submit" onClick={handleSingIn}>SING IN</button>
 
                 </div>
             </div>
