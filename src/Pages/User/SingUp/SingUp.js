@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import bgImg from '../../../images/bg.svg'
 import userImg from '../../../images/avatar.svg'
 import { FaKey, FaMailBulk, FaUser } from 'react-icons/fa';
@@ -10,8 +11,10 @@ const SingUp = () => {
     const handleSingIn = () => {
         navigate('/singIn')
     }
+    const [displayName, setDisplayName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [updateProfile, updating, userError] = useUpdateProfile(auth);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -19,6 +22,16 @@ const SingUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    // Update user name
+
+    const userUpdate = async () => {
+        await updateProfile({ displayName })
+        alert('Updated profile');
+    }
+
+    const handleUserName = (e) => {
+        setDisplayName(e.target.value)
+    }
     const handleEmail = (e) => {
         setEmail(e.target.value)
     }
@@ -28,7 +41,14 @@ const SingUp = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(email, password)
+        createUserWithEmailAndPassword(email, password)
+        userUpdate()
+        // e.target.user.value = ''
+        // e.target.email.value = ''
+        // e.target.pass.value = ''
+    }
+    if (user) {
+        console.log(user)
     }
     return (
         <div>
@@ -40,19 +60,21 @@ const SingUp = () => {
                     <img src={userImg} alt="" className="user-img" />
                     <h2>Welcome</h2>
                     <form onSubmit={handleSubmit}>
+
                         <span className='d-flex align-items-center user-input'> <FaUser className='me-2' />
-                            <input className='' placeholder='User Name' type="text" name="" />
+                            <input onChange={handleUserName} className='' placeholder='User Name' type="text" name="user" required />
                         </span>
 
                         <span className='d-flex align-items-center user-input'> <FaMailBulk className='me-2' />
-                            <input onChange={handleEmail} className='' placeholder='User Email' type="text" name="" />
+                            <input onChange={handleEmail} className='' placeholder='User Email' type="email" name="email" required />
 
                         </span>
 
                         <span className='d-flex align-items-center user-input '>
                             <FaKey className='me-2' />
-                            <input onChange={handlePassword} className='' type="password" name="" placeholder='User Password' />
+                            <input onChange={handlePassword} className='' type="password" name="pass" placeholder='User Password' required />
                         </span>
+
                         <p>Already have an account?<strong className='strong' onClick={handleSingIn}>Log In</strong></p>
                         <input className='submit-type' type="submit" value="Sing Up" />
                     </form>
