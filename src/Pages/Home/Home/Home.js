@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import HomeItems from '../HomeItems/HomeItems';
+import SectionOne from '../SectionOne/SectionOne';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
                     items.map(item => <HomeItems item={item} />)
                 }
             </div>
+            <SectionOne />
         </div>
     );
 };

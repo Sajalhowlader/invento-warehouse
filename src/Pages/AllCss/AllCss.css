@@ -214,3 +214,32 @@
     margin-left: 10px;
     color: #4716bf;
 }
+
+/* Section one css */
+.one-Container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.one-info h3 {
+    font-size: 33px;
+    margin-bottom: 40px;
+}
+
+.oneImg {
+    width: 600px;
+}
+
+.oneImg img {
+    width: 100%;
+}
+
+.one-info span {
+    color: #4069ff;
+    font-size: 45px;
+    font-family: inherit;
+}

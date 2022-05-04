@@ -56,7 +56,7 @@ const SingIn = () => {
                             <input onChange={handlePassword} className='' type="password" name="" placeholder='User Password' />
                         </span>
 
-                        <p>New to C&A Werehouse?<strong className='strong' onClick={handleSingUp}>Register Now</strong></p>
+                        <p>New to C&C Werehouse?<strong className='strong' onClick={handleSingUp}>Register Now</strong></p>
                         <input className='submit-type' type="submit" value="Sing In" />
                     </form>
                     <div className="or-container">
