@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HomeItems from '../HomeItems/HomeItems';
 import SectionOne from '../SectionOne/SectionOne';
+import SectionTwo from '../SectionTwo/SectionTwo';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
                 }
             </div>
             <SectionOne />
+            <SectionTwo />
         </div>
     );
 };
