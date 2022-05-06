@@ -1,5 +1,5 @@
 import React from 'react';
-import oneImg from '../../../images/about-2.png'
+import oneImg from '../../../images/about-1.jpg'
 const SectionOne = () => {
     return (
         <div className='one-container'>
@@ -9,10 +9,12 @@ const SectionOne = () => {
             <div className='one-info-Container'>
                 <div className="one-info">
                     <h3>At <span>Warehouse</span>, I provide a unique solution for warehousing space for business and consumers</h3>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                    <p>Warehousing is an important piece of your retail supply chain. While its not the sexiest of subjects, warehousing and inventory storage affect everything from sourcing raw materials and, efficiently managing inventory, to getting orders delivered to customers on time.
                         <br />
                         <br />
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        Though the principles of warehousing have not changed much over the years, warehousing solutions have evolved a lot.
+
+                        With new technologies, urbanization, and the ever-growing world of online shopping, warehousing has never been a hotter topic — so much so that there has even been a shortage of warehouse space and on-demand warehousing popping up.
 
                     </p>
                 </div>

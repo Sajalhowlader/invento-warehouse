@@ -7,14 +7,16 @@ import Header from './Pages/Home/Header/Header';
 import AllItems from './Pages/AllItems/AllItems';
 import SingIn from './Pages/User/SingIn/SingIn';
 import SingUp from './Pages/User/SingUp/SingUp';
+import Banner from './Pages/Home/Banner/Banner';
 
 
 
 function App() {
-  
+
   return (
     <div className="App">
       <Header />
+      <Banner />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='home' element={<Home />} />

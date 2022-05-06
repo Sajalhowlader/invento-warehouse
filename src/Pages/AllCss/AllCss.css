@@ -314,3 +314,29 @@
     background: whitesmoke;
     padding: 40px 0px;
 }
+
+/* Banner */
+.site-banner {
+    background-image: url(../../images/slider-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    height: 80vh;
+}
+
+.banner-info-container {
+    height: 500px;
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-info-container h1 {
+    font-size: 55px;
+    letter-spacing: 30px;
+    font-family: cursive;
+    color: rebeccapurple;
+    font-weight: bold;
+}
