@@ -3,7 +3,10 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
-            <h1>banner</h1>
+            <h2>WELCOME TO INVENTO WAREHOUSE</h2>
+            <div className="banner">
+
+            </div>
         </div>
     );
 };

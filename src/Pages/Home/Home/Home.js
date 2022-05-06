@@ -13,12 +13,16 @@ const Home = () => {
     }, [])
     const items = homeItems.slice(0, 6)
     return (
-        <div>
-            <h1>INVENTORY ITEMS</h1>
-            <div className='inventory-items-container'>
-                {
-                    items.map(item => <HomeItems item={item} />)
-                }
+        <div >
+            <div className='bg-color'>
+                <div className="title-container">
+                    <h2 className='section-title'>INVENTORY ITEMS</h2>
+                </div>
+                <div className='inventory-items-container'>
+                    {
+                        items.map(item => <HomeItems item={item} />)
+                    }
+                </div>
             </div>
             <SectionOne />
             <SectionTwo />

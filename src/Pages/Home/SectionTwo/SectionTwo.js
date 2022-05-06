@@ -5,8 +5,10 @@ import imgThree from '../../../images/provite-3.jpg'
 import imgFour from '../../../images/provite-4.jpg'
 const SectionTwo = () => {
     return (
-        <div>
-            <h2>Services</h2>
+        <div className='bg-color'>
+            <div className="title-container">
+                <h2 className='section-title two'>SERVICES</h2>
+            </div>
             <div className="two-container">
                 <div className="two-info">
                     <img src={imgThree} alt="" />
