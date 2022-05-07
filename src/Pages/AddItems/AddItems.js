@@ -9,14 +9,29 @@ const AddItems = () => {
         const price = e.target.price.value
         const quantity = e.target.quantity.value
         const supply = e.target.supplier.value
-        const user = {
+        const addInfo = {
             name,
             img,
             description,
             price,
             quantity,
             supply
-        }
+        };
+        fetch('http://localhost:5000/products', {
+            method: 'POST',
+            body: JSON.stringify(addInfo),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data) {
+                    alert('product add successfully')
+                    e.target.reset()
+
+                }
+            });
 
     }
     return (

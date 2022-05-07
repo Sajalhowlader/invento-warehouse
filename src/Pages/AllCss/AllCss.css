@@ -4,11 +4,13 @@
 }
 
 .nav-title {
-    color: #e9a6b2f5;
+    color: #a993fff5;
     outline-width: 36px;
     font-size: 37px;
     font-weight: 700;
-    font-family: serif;
+    font-family: monospace;
+    letter-spacing: 6px;
+    font-style: italic;
 }
 
 .nav-title span {
@@ -17,13 +19,13 @@
 
 .nav-menu a {
     text-decoration: none;
-    padding: 0px 40px;
+    padding: 0px 15px;
     color: white;
     font-weight: bold;
 }
 
 .nav-button {
-    margin-left: 115px;
+    margin-left: 55px;
     color: #ff0052;
     font-weight: bold;
     border: 1px solid #3c3a3a;
@@ -135,7 +137,6 @@
 }
 
 .divider-info {
-    /* border: 1px solid; */
     width: 66%;
     margin: 0 auto;
     text-align: center;
@@ -148,6 +149,16 @@
     border-bottom: 2px solid #38d39f;
     margin-bottom: 30px;
 
+}
+
+.all-items-title {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 25px;
+    font-style: italic;
+    font-family: arial black;
+    font-size: 32px;
+    color: #262525;
 }
 
 .user-input input {

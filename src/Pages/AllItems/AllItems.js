@@ -27,7 +27,7 @@ const AllItems = () => {
     }
     return (
         <div>
-            <h1>ALL ITEMS</h1>
+            <h1 className='all-items-title'>ALL ITEMS</h1>
             <div className="all-items-container">
 
                 {
