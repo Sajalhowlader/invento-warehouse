@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const UpdateItems = () => {
+    const navigate = useNavigate()
     const { productId } = useParams()
     const [products, setProducts] = useState({});
     const [isReload, setIsReload] = useState(false)
@@ -76,6 +77,9 @@ const UpdateItems = () => {
             })
 
     }
+    const handleAddNew = () => {
+        navigate('/addItems')
+    }
     return (
         <div>
             <div className="update-container">
@@ -96,7 +100,9 @@ const UpdateItems = () => {
                         </form>
                     </div>
                 </div>
-
+            </div>
+            <div className='add-new'>
+                <button onClick={handleAddNew} className='delivered '>Add New Item</button>
             </div>
         </div>
     );

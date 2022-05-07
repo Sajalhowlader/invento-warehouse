@@ -9,6 +9,7 @@ import SingIn from './Pages/User/SingIn/SingIn';
 import SingUp from './Pages/User/SingUp/SingUp';
 import UpdateItems from './Pages/UpdateItems/UpdateItems';
 import Protected from './Pages/Protected/Protected';
+import AddItems from './Pages/AddItems/AddItems';
 
 
 
@@ -29,6 +30,12 @@ function App() {
             <UpdateItems />
           </Protected>
         } />
+        <Route path='addItems' element={
+          <Protected>
+            <AddItems />
+          </Protected>
+        } />
+
         <Route path='singUp' element={<SingUp />} />
       </Routes>
       <Footer />

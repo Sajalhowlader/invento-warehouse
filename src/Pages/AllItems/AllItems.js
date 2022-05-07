@@ -8,12 +8,30 @@ const AllItems = () => {
             .then(res => res.json())
             .then(data => setAllItems(data))
     }, [])
+    const handleDelete = (id) => {
+        console.log(id);
+        const areYouSure = window.confirm("Are you want to Delete your Items")
+        if (areYouSure) {
+            const url = `http://localhost:5000/products/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data) {
+                        const remaining = allItems.filter(product => product._id !== id)
+                        setAllItems(remaining)
+                    }
+                })
+        }
+    }
     return (
         <div>
             <h1>ALL ITEMS</h1>
             <div className="all-items-container">
+
                 {
-                    allItems.map(items => <ShowItems key={items._id} items={items} />)
+                    allItems.map(items => <ShowItems key={items._id} items={items} handleClick={handleDelete} />)
                 }
             </div>
         </div>
