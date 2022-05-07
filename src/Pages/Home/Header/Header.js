@@ -1,5 +1,8 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 
 const Header = () => {
@@ -7,6 +10,10 @@ const Header = () => {
     const handleSingIn = () => {
         navigate("/singIn")
     }
+    const handleSingOut = () => {
+        signOut(auth);
+    };
+    const [user] = useAuthState(auth)
     return (
         <nav className="navbar navbar-expand-lg nav-header">
             <div className="container">
@@ -21,7 +28,11 @@ const Header = () => {
                         <NavLink to="/home" aria-current="page" >HOME</NavLink>
                     </ul>
 
-                    <button className="btn btn-outline-success nav-button" type="submit" onClick={handleSingIn}>SING IN</button>
+                    {user ?
+                        <button className="btn btn-outline-success nav-button" type="submit" onClick={handleSingOut}>SING OUT</button>
+                        :
+                        <button className="btn btn-outline-success nav-button" type="submit" onClick={handleSingIn}>SING IN</button>
+                    }
 
                 </div>
             </div>

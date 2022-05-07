@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import bgImg from '../../../images/bg.svg'
 import userImg from '../../../images/avatar.svg'
 import googleImg from '../../../images/google3.png'
 import { FaKey, FaMailBulk, } from 'react-icons/fa';
 import auth from '../../../firebase.init';
 const SingIn = () => {
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
     const navigate = useNavigate()
     const handleSingUp = () => {
         navigate("/singUp")
@@ -37,6 +39,9 @@ const SingIn = () => {
         signInWithGoogle()
     }
 
+    if (user || googleUser) {
+        navigate(from, { replace: true });
+    }
     return (
         <div>
             <div className="divider-container">

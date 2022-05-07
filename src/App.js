@@ -7,6 +7,8 @@ import Header from './Pages/Home/Header/Header';
 import AllItems from './Pages/AllItems/AllItems';
 import SingIn from './Pages/User/SingIn/SingIn';
 import SingUp from './Pages/User/SingUp/SingUp';
+import UpdateItems from './Pages/UpdateItems/UpdateItems';
+import Protected from './Pages/Protected/Protected';
 
 
 
@@ -22,6 +24,11 @@ function App() {
         <Route path='home' element={<Home />} />
         <Route path='allItems' element={<AllItems />} />
         <Route path='singIn' element={<SingIn />} />
+        <Route path='updateItems' element={
+          <Protected>
+            <UpdateItems />
+          </Protected>
+        } />
         <Route path='singUp' element={<SingUp />} />
       </Routes>
       <Footer />
