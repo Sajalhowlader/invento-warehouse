@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ShowUpdateItem from '../ShowUpdateItem/ShowUpdateItem';
 
 const UpdateItems = () => {
     const { productId } = useParams()
@@ -15,7 +16,7 @@ const UpdateItems = () => {
     return (
         <div>
             {
-                products
+                products.map(product => <ShowUpdateItem key={product._id} product={product} />)
             }
         </div>
     );
