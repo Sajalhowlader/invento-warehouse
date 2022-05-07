@@ -13,7 +13,7 @@ const Home = () => {
     }
     const [homeItems, setHomeItems] = useState([])
     useEffect(() => {
-        fetch('items.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setHomeItems(data))
     }, [])
@@ -28,7 +28,7 @@ const Home = () => {
                 <div className="inventory-items-container">
                     <div className='single-inventory-items-container'>
                         {
-                            items.map(item => <HomeItems item={item} />)
+                            items.map(item => <HomeItems key={item._id} item={item} />)
                         }
                     </div>
                     <div className="see-more">

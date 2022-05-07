@@ -24,7 +24,7 @@ function App() {
         <Route path='home' element={<Home />} />
         <Route path='allItems' element={<AllItems />} />
         <Route path='singIn' element={<SingIn />} />
-        <Route path='updateItems' element={
+        <Route path='/updateItems/:productId' element={
           <Protected>
             <UpdateItems />
           </Protected>

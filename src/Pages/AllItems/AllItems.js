@@ -4,7 +4,7 @@ import ShowItems from '../ShowItems/ShowItems';
 const AllItems = () => {
     const [allItems, setAllItems] = useState([])
     useEffect(() => {
-        fetch('items.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setAllItems(data))
     }, [])
@@ -13,7 +13,7 @@ const AllItems = () => {
             <h1>ALL ITEMS</h1>
             <div className="all-items-container">
                 {
-                    allItems.map(items => <ShowItems items={items} />)
+                    allItems.map(items => <ShowItems key={items._id} items={items} />)
                 }
             </div>
         </div>
