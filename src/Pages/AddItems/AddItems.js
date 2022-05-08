@@ -1,6 +1,9 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddItems = () => {
+    const [user] = useAuthState(auth)
     const handleAddItems = (e) => {
         e.preventDefault()
         const name = e.target.product.value
@@ -36,9 +39,10 @@ const AddItems = () => {
     }
     return (
         <div>
+            <h2 className='all-items-title'>Add New Item</h2>
             <div className="form-container">
                 <form onSubmit={handleAddItems}>
-                    <input type="email" />
+                    <input name='email' type="email" value={user.email} />
                     <input type="text" name="product" placeholder='Product Name' />
 
                     <input type="text" name="img" placeholder='Img url' />

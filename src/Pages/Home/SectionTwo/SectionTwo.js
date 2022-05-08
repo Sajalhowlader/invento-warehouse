@@ -17,7 +17,7 @@ const SectionTwo = () => {
                     <button>More</button>
                 </div>
                 <div className="two-info">
-                    <img src={imgOne} alt="" />
+                    <img className='img-fluid' src={imgOne} alt="" />
                     <h4>Distribution </h4>
                     <p>Distribution all order from the customer.My goal is to happy all my customer.</p>
                     <button>More</button>

@@ -25,8 +25,13 @@ const Header = () => {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 nav-menu">
                         <NavLink to="/home" aria-current="page" >HOME</NavLink>
 
-                        <NavLink to="/allItems" aria-current="page" >MANAGE ITEMS</NavLink>
-                        <NavLink to="/addItems" aria-current="page" >ADD ITEMS</NavLink>
+
+
+                        {user && <NavLink to="/allItems" aria-current="page" >MANAGE ITEMS</NavLink>}
+
+                        {user && <NavLink to="/addItems" aria-current="page" >ADD ITEMS</NavLink>}
+
+
 
                         <NavLink to="/blogs" aria-current="page" >BLOGS</NavLink>
                     </ul>

@@ -482,10 +482,11 @@
 }
 
 .form-container {
-    border: 1px solid;
+    border: 3px solid #ff0047;
     width: 45%;
     margin: 0 auto;
     padding: 35px;
+    border-radius: 10px;
 }
 
 .form-container input,
@@ -548,7 +549,7 @@ input.add_items {
     .single-inventory-items-container {
         display: grid;
         grid-template-columns: 1fr;
-        width: 100%;
+        width: 85%;
     }
 
     .two-container {
@@ -560,4 +561,41 @@ input.add_items {
         display: grid;
         grid-template-columns: 1fr;
     }
+
+    .oneImg {
+        width: 280px;
+    }
+
+    .inventory-item {
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    .inventory-item img {
+        width: 120%;
+    }
+
+    .banner-info-container h1 {
+        font-size: 25px;
+        letter-spacing: 12px;
+    }
+
+    .banner-info-container h2 {
+        font-size: 15px;
+        letter-spacing: 6px;
+    }
+
+    .second-one {
+        margin: 0 auto;
+        line-height: 12px;
+    }
+
+    .two-info {
+        margin: 0 auto;
+    }
+
+    .update-btn {
+        width: 42%;
+    }
+
 }
