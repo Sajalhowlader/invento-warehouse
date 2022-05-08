@@ -1,6 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { FaHamburger } from 'react-icons/fa';
 import { NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
@@ -18,8 +19,10 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg nav-header">
             <div className="container">
                 <NavLink to='/home' className="navbar-brand " ><h4 className='nav-title'>INVENTO</h4></NavLink>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <button className="navbar-toggler toggler-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon">
+                        < FaHamburger className='text-white' />
+                    </span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 nav-menu">

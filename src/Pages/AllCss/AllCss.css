@@ -2,6 +2,10 @@
     background: #070920
 }
 
+.toggler-color {
+    background: #27032e;
+}
+
 .nav-title {
     color: #a993fff5;
     outline-width: 36px;
@@ -112,7 +116,8 @@
     border: 1px solid #c1c1c1;
     border-radius: 10px;
     overflow: hidden;
-    height: 530px;
+    height: 510px;
+    background: #f9f3f3;
 }
 
 .all-items-container {
