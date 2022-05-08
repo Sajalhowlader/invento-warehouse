@@ -6,6 +6,7 @@ const AddItems = () => {
     const [user] = useAuthState(auth)
     const handleAddItems = (e) => {
         e.preventDefault()
+        const email = e.target.email.value
         const name = e.target.product.value
         const img = e.target.img.value
         const description = e.target.description.value
@@ -13,6 +14,7 @@ const AddItems = () => {
         const quantity = e.target.quantity.value
         const supply = e.target.supplier.value
         const addInfo = {
+            email,
             name,
             img,
             description,
@@ -36,13 +38,33 @@ const AddItems = () => {
                 }
             });
 
+        fetch('http://localhost:5000/myItems', {
+            method: 'POST',
+            body: JSON.stringify(addInfo),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.insertedId) {
+                    alert('Add items Successfully')
+                    e.target.reset()
+
+                }
+            });
+
+
     }
+
+
+
     return (
         <div>
             <h2 className='all-items-title'>Add New Item</h2>
             <div className="form-container">
                 <form onSubmit={handleAddItems}>
-                    <input name='email' type="email" value={user.email} />
+                    <input name='email' type="email" value={user.email} readOnly />
                     <input type="text" name="product" placeholder='Product Name' />
 
                     <input type="text" name="img" placeholder='Img url' />

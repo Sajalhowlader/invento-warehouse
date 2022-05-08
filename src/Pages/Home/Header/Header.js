@@ -31,6 +31,8 @@ const Header = () => {
 
                         {user && <NavLink to="/addItems" aria-current="page" >ADD ITEMS</NavLink>}
 
+                        {user && <NavLink to="/myOrders" aria-current="page" >MY ORDER</NavLink>}
+
 
 
                         <NavLink to="/blogs" aria-current="page" >BLOGS</NavLink>

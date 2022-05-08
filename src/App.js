@@ -12,6 +12,7 @@ import Protected from './Pages/Protected/Protected';
 import AddItems from './Pages/AddItems/AddItems';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import MyOrders from './Pages/MyOrders/MyOrders';
 
 
 
@@ -35,6 +36,11 @@ function App() {
         <Route path='addItems' element={
           <Protected>
             <AddItems />
+          </Protected>
+        } />
+        <Route path='myOrders' element={
+          <Protected>
+            <MyOrders />
           </Protected>
         } />
         <Route path='blogs' element={<Blogs />} />

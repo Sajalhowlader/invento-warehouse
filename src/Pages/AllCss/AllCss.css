@@ -543,6 +543,18 @@ input.add_items {
     font-family: arial black;
 }
 
+/* my items style */
+.my-items-container {
+    background: #ff1140;
+    padding: 40px 0px;
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
 
 /* Responsive style */
 @media screen and (max-width:688px) {
