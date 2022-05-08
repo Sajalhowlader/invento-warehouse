@@ -23,7 +23,7 @@ const AddItems = () => {
             quantity,
             supply
         };
-        fetch('http://localhost:5000/products', {
+        fetch('https://aqueous-brook-47293.herokuapp.com/products', {
             method: 'POST',
             body: JSON.stringify(addInfo),
             headers: {
@@ -39,7 +39,7 @@ const AddItems = () => {
                 }
             });
 
-        fetch('http://localhost:5000/myItems', {
+        fetch('https://aqueous-brook-47293.herokuapp.com/myItems', {
             method: 'POST',
             body: JSON.stringify(addInfo),
             headers: {

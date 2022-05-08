@@ -13,7 +13,7 @@ const MyOrders = () => {
     useEffect(() => {
         const myOrder = async () => {
             const email = user.email
-            const url = `http://localhost:5000/myItems?email=${email}`;
+            const url = `https://aqueous-brook-47293.herokuapp.com/myItems?email=${email}`;
 
             try {
                 const { data } = await axios.get(url, {

@@ -8,7 +8,7 @@ const UpdateItems = () => {
     const [products, setProducts] = useState({});
     const [isReload, setIsReload] = useState(false)
     useEffect(() => {
-        const url = `http://localhost:5000/products/${productId}`
+        const url = `https://aqueous-brook-47293.herokuapp.com/products/${productId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -25,7 +25,7 @@ const UpdateItems = () => {
             description,
             quantity,
         }
-        const url = `http://localhost:5000/products/${productId}`
+        const url = `https://aqueous-brook-47293.herokuapp.com/products/${productId}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -57,7 +57,7 @@ const UpdateItems = () => {
             updateStock,
             quantity,
         }
-        const url = `http://localhost:5000/products/${productId}`
+        const url = `https://aqueous-brook-47293.herokuapp.com/products/${productId}`
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -38,7 +38,7 @@ const SingIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         await signInWithEmailAndPassword(email, password)
-        const { data } = await axios.post('http://localhost:5000/singIn', { email });
+        const { data } = await axios.post('https://aqueous-brook-47293.herokuapp.com/singIn', { email });
         localStorage.setItem('userToken', data.token);
         navigate(from, { replace: true });
     }

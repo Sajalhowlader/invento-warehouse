@@ -6,7 +6,7 @@ import ShowItems from '../ShowItems/ShowItems';
 const AllItems = () => {
     const [allItems, setAllItems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://aqueous-brook-47293.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setAllItems(data))
     }, [])
@@ -17,7 +17,7 @@ const AllItems = () => {
         console.log(id);
         const areYouSure = window.confirm("Are you want to Delete your Items")
         if (areYouSure) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = `https://aqueous-brook-47293.herokuapp.com/products/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

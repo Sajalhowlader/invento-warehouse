@@ -14,7 +14,7 @@ const Home = () => {
     }
     const [homeItems, setHomeItems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://aqueous-brook-47293.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setHomeItems(data))
 
