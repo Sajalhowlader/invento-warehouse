@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import Loading from '../Lodaing/Loading';
 import ShowItems from '../ShowItems/ShowItems';
 
 const AllItems = () => {
@@ -9,6 +10,9 @@ const AllItems = () => {
             .then(res => res.json())
             .then(data => setAllItems(data))
     }, [])
+    if (allItems.length === 0) {
+        return <Loading />
+    }
     const handleDelete = (id) => {
         console.log(id);
         const areYouSure = window.confirm("Are you want to Delete your Items")

@@ -3,7 +3,7 @@ import { FaFacebook, FaGooglePlus, FaInstagram, FaLinkedin, FaTwitter } from 're
 const Footer = () => {
     return (
         <footer className='footer'>
-            <h2>Cash & Carry</h2>
+            <h2>INVENTO</h2>
             <p>Copyright &copy; Antu Howlader Sajal</p>
             <div className="social-icon-container">
                 <FaFacebook className='social-icon' /> <FaInstagram className='social-icon' /> <FaTwitter className='social-icon' /> <FaLinkedin className='social-icon' /> <FaGooglePlus className='social-icon' />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import googleImg from '../../../images/google3.png'
 import { FaKey, FaMailBulk, } from 'react-icons/fa';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
+const axios = require('axios');
 const SingIn = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
@@ -33,9 +34,11 @@ const SingIn = () => {
         setPassword(e.target.value)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password)
+
+
     }
 
     const handleGoogle = () => {
@@ -50,6 +53,19 @@ const SingIn = () => {
         }
 
     }
+    useEffect(() => {
+        if (error) {
+            toast(error?.message)
+        }
+
+    }, [error])
+
+    useEffect(() => {
+        if (googleError) {
+            toast(googleError?.message)
+        }
+    }, [googleError])
+
     if (user || googleUser) {
         navigate(from, { replace: true });
     }

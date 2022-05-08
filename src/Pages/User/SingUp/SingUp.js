@@ -8,6 +8,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { sendEmailVerification } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import Loading from '../../Lodaing/Loading';
 const SingUp = () => {
     const navigate = useNavigate()
     const handleSingIn = () => {
@@ -16,7 +17,7 @@ const SingUp = () => {
     const [displayName, setDisplayName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [updateProfile, updating, userError] = useUpdateProfile(auth);
+    const [updateProfile] = useUpdateProfile(auth);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -44,15 +45,23 @@ const SingUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         createUserWithEmailAndPassword(email, password)
+
         sendEmailVerification(auth.currentUser)
             .then(() => {
                 toast('Email verification send')
             })
+
         userUpdate()
     }
 
     if (user) {
-
+        navigate('/singIn')
+    }
+    if (error) {
+        toast(error)
+    }
+    if (loading) {
+        return <Loading />
     }
     return (
         <div>

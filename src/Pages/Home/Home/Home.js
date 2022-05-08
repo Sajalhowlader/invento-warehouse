@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../Lodaing/Loading';
 import Banner from '../Banner/Banner';
 import HomeItems from '../HomeItems/HomeItems';
 import SectionOne from '../SectionOne/SectionOne';
@@ -16,8 +17,13 @@ const Home = () => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setHomeItems(data))
+
     }, [])
+    if (homeItems.length === 0) {
+        return <Loading />
+    }
     const items = homeItems.slice(0, 6)
+
     return (
         <div >
             <Banner />
