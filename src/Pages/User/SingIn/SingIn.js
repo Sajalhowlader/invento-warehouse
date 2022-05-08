@@ -8,7 +8,8 @@ import googleImg from '../../../images/google3.png'
 import { FaKey, FaMailBulk, } from 'react-icons/fa';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
-const axios = require('axios');
+import axios from 'axios';
+
 const SingIn = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
@@ -37,8 +38,9 @@ const SingIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         await signInWithEmailAndPassword(email, password)
-
-
+        const { data } = await axios.post('http://localhost:5000/singIn', { email });
+        localStorage.setItem('userToken', data.token);
+        navigate(from, { replace: true });
     }
 
     const handleGoogle = () => {
@@ -66,7 +68,7 @@ const SingIn = () => {
         }
     }, [googleError])
 
-    if (user || googleUser) {
+    if (googleUser) {
         navigate(from, { replace: true });
     }
     return (
