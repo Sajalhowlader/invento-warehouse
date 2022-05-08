@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import bgImg from '../../../images/bg.svg'
@@ -16,18 +16,20 @@ const SingIn = () => {
     }
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const handleEmail = (e) => {
         setEmail(e.target.value)
     }
     const handlePassword = (e) => {
-        setEmail(e.target.value)
+        setPassword(e.target.value)
     }
 
     const handleSubmit = (e) => {
@@ -38,7 +40,15 @@ const SingIn = () => {
     const handleGoogle = () => {
         signInWithGoogle()
     }
+    const resetPassword = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email);
+            alert('Sent email');
+        } else {
+            alert('enter your email address')
+        }
 
+    }
     if (user || googleUser) {
         navigate(from, { replace: true });
     }
@@ -61,7 +71,10 @@ const SingIn = () => {
                             <input onChange={handlePassword} className='' type="password" name="" placeholder='User Password' />
                         </span>
 
-                        <p>New to C&C Werehouse?<strong className='strong' onClick={handleSingUp}>Register Now</strong></p>
+                        <p>New to Invento Werehouse?<strong className='strong' onClick={handleSingUp}>Register Now</strong></p>
+
+                        <p>Forget Password?<strong className='strong' onClick={resetPassword}>Reset</strong></p>
+
                         <input className='submit-type' type="submit" value="Sing In" />
                     </form>
                     <div className="or-container">

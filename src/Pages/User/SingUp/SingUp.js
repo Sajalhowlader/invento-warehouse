@@ -6,6 +6,7 @@ import userImg from '../../../images/avatar.svg'
 import { FaKey, FaMailBulk, FaUser } from 'react-icons/fa';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 const SingUp = () => {
     const navigate = useNavigate()
     const handleSingIn = () => {
@@ -42,13 +43,15 @@ const SingUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         createUserWithEmailAndPassword(email, password)
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                alert('Email verification send')
+            })
         userUpdate()
-        // e.target.user.value = ''
-        // e.target.email.value = ''
-        // e.target.pass.value = ''
     }
+
     if (user) {
-        console.log(user)
+
     }
     return (
         <div>

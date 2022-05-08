@@ -10,6 +10,8 @@ import SingUp from './Pages/User/SingUp/SingUp';
 import UpdateItems from './Pages/UpdateItems/UpdateItems';
 import Protected from './Pages/Protected/Protected';
 import AddItems from './Pages/AddItems/AddItems';
+import Blogs from './Pages/Blogs/Blogs';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -35,8 +37,9 @@ function App() {
             <AddItems />
           </Protected>
         } />
-
+        <Route path='blogs' element={<Blogs />} />
         <Route path='singUp' element={<SingUp />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

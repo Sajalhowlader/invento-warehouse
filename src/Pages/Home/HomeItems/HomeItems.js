@@ -9,7 +9,7 @@ const HomeItems = ({ item }) => {
     }
     return (
         <div className='inventory-item'>
-            <img src={img} alt="" />
+            <img className="img-fluid" src={img} alt="" />
             <div className="item-info">
                 <h2>{name}</h2>
                 <h4>{price}</h4>
