@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# INVENTO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Invento warehouse live site link [Invento website](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## stack overflow question link
+Stack Overflow question link [Stack Overflow Question](https://stackoverflow.com/questions/72161310/how-to-add-display-name-in-react-firebase-hooks-and-how-to-update-username-in-u).
 
-In the project directory, you can run:
+## `Description`
+This is Invento warehouse website.In this website you can manage your product. You can update your stock. You can add new items in your stock.You can delete your item.
 
-### `npm start`
+### `What i have done in this project`
+* At first make a banner,inventory items,and two meaningful section and a footer.
+* Make some route where user can change and manage his items easily.
+* Make a update route where user can update his items stock and delivered his items. If user click delivered button stock quantity remove one by one. Side by side user can update his stock click with update stock.
+*In the manage items component there is a delete button. If user click on delete button stock will be remove UI and database.
+* Make a add items section where user can update his new items.
+* Add sing in and sing up component.
+* Update user name and email.
+* Add jwt for user authorization.
+* Make the website mobile responsive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `What i have use in this project`
+* React firebase hook.
+* React router.
+* Bootstrap v5.
+* Axios.
+* Firebase
+* Jwt
+* Mongodb(for database)
+* Heroku (for hosting server)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
