@@ -1,6 +1,6 @@
 # INVENTO
 
-Invento warehouse live site link [Invento website](https://github.com/facebook/create-react-app).
+Invento warehouse live site link [Invento website](https://c-and-a-warehouse.web.app/).
 
 ## stack overflow question link
 Stack Overflow question link [Stack Overflow Question](https://stackoverflow.com/questions/72161310/how-to-add-display-name-in-react-firebase-hooks-and-how-to-update-username-in-u).
