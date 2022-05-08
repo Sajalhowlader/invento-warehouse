@@ -13,7 +13,8 @@ import AddItems from './Pages/AddItems/AddItems';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 import MyOrders from './Pages/MyOrders/MyOrders';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -48,6 +49,7 @@ function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

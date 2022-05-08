@@ -7,6 +7,7 @@ import { FaKey, FaMailBulk, FaUser } from 'react-icons/fa';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { sendEmailVerification } from 'firebase/auth';
+import { toast } from 'react-toastify';
 const SingUp = () => {
     const navigate = useNavigate()
     const handleSingIn = () => {
@@ -27,7 +28,7 @@ const SingUp = () => {
 
     const userUpdate = async () => {
         await updateProfile({ displayName })
-        alert('Updated profile');
+        toast('Updated profile');
     }
 
     const handleUserName = (e) => {
@@ -45,7 +46,7 @@ const SingUp = () => {
         createUserWithEmailAndPassword(email, password)
         sendEmailVerification(auth.currentUser)
             .then(() => {
-                alert('Email verification send')
+                toast('Email verification send')
             })
         userUpdate()
     }

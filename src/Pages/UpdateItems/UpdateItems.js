@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const UpdateItems = () => {
     const navigate = useNavigate()
@@ -36,7 +37,7 @@ const UpdateItems = () => {
             .then(data => {
                 if (data) {
                     setIsReload(!isReload)
-                    alert('delivered successfully')
+                    toast('delivered successfully')
                 }
             })
     }
@@ -68,10 +69,10 @@ const UpdateItems = () => {
             .then(data => {
                 if (data) {
                     if (updateStock < 1) {
-                        alert("add some number")
+                        toast("add some number")
                     } else {
                         setIsReload(!isReload)
-                        alert('add successfully')
+                        toast('add successfully')
                     }
                 }
             })

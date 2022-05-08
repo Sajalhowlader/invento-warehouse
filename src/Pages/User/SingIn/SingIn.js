@@ -7,6 +7,7 @@ import userImg from '../../../images/avatar.svg'
 import googleImg from '../../../images/google3.png'
 import { FaKey, FaMailBulk, } from 'react-icons/fa';
 import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
 const SingIn = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
@@ -43,9 +44,9 @@ const SingIn = () => {
     const resetPassword = async () => {
         if (email) {
             await sendPasswordResetEmail(email);
-            alert('Sent email');
+            toast('Sent email');
         } else {
-            alert('enter your email address')
+            toast('enter your email address')
         }
 
     }

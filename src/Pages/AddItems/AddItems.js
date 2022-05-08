@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddItems = () => {
@@ -32,7 +33,7 @@ const AddItems = () => {
             .then((response) => response.json())
             .then((data) => {
                 if (data) {
-                    alert('product add successfully')
+                    toast('product add successfully')
                     e.target.reset()
 
                 }
@@ -48,7 +49,7 @@ const AddItems = () => {
             .then((response) => response.json())
             .then((data) => {
                 if (data.insertedId) {
-                    alert('Add items Successfully')
+                    toast('Add items Successfully')
                     e.target.reset()
 
                 }
@@ -76,6 +77,7 @@ const AddItems = () => {
                 </form>
 
             </div>
+
         </div>
     );
 };

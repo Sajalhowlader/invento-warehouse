@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import ShowItems from '../ShowItems/ShowItems';
 
 const AllItems = () => {
@@ -19,6 +20,7 @@ const AllItems = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data) {
+                        toast("Delete successull")
                         const remaining = allItems.filter(product => product._id !== id)
                         setAllItems(remaining)
                     }
